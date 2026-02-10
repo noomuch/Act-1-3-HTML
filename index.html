@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .container {
+            background: #FFFFFF;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            text-align: center;
+            width: 320px;
+        }
+
+        select {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Home Page</h1>
+
+<div class="container">
+    <select name="sample" onchange="location = this.value;">
+        <option value="#">Activities</option>
+        <option value="activity1.html">Activity 1</option>
+        <option value="activity2.html">Activity 2</option>
+    </select>
+
+    <div class="links">
+        <a href="activity3About.html"><button type="button">About Me</button></a>
+        <a href="activity3Gallery.html"><button type="button">Gallery</button></a>
+        <a href="activity3Favorites.html"><button type="button">Favorites</button></a>
+    </div>
+</div>
+
+</body>
+</html>

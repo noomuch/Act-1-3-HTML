@@ -1,0 +1,73 @@
+<html>
+<head>
+    <title>Movie Genres</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .options {
+            background: white;
+            padding: 25px 35px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            margin-bottom: 20px;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Movie Genres</h1>
+
+    <div class="options">
+        <label><input type="radio" name="genre" value="Action.html"> Action</label>
+        <label><input type="radio" name="genre" value="Adventure.html"> Adventure</label>
+        <label><input type="radio" name="genre" value="Animation.html"> Animation</label>
+        <label><input type="radio" name="genre" value="Drama.html"> Drama</label>
+        <label><input type="radio" name="genre" value="Horror.html"> Horror</label>
+    </div>
+
+    <div>
+        <button type="button" onclick="goToGenre()">OK</button>
+        <a href="activity3Favorites.html">
+            <button type="button">Back</button>
+        </a>
+    </div>
+
+    <script>
+        function goToGenre() {
+            const selected = document.querySelector('input[name="genre"]:checked');
+            if (!selected) return;
+            window.location.href = selected.value;
+        }
+    </script>
+
+</body>
+</html>

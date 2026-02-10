@@ -1,0 +1,96 @@
+<html>
+<head>
+    <title>Favorites</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .box {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            text-align: center;
+            width: 300px;
+        }
+
+        .options {
+            text-align: left;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button {
+            margin: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+        
+        .footer {
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>My Favorites</h1>
+
+<div class="box">
+    <div class="options">
+        <label>
+            <input type="radio" name="favorite" value="image"> Image
+        </label>
+        <label>
+            <input type="radio" name="favorite" value="song"> Song
+        </label>
+        <label>
+            <input type="radio" name="favorite" value="movie"> Movie
+        </label>
+    </div>
+</div>
+
+<div class ="footer">
+    <button class="ok-btn" onclick="submitFavorites()">OK</button>
+    <a href="activity3.html">
+        <button class="back-btn" type="button">Back</button>
+    </a>
+    </div>
+<script>
+    function submitFavorites() {
+        const selected = document.querySelector('input[name="favorite"]:checked');
+        if (!selected) return;
+
+        if (selected.value === "image") {
+            window.location.href = "activityFImage.html";
+        } else if (selected.value === "song") {
+            window.location.href = "activityFMusic.html";
+        } else if (selected.value === "movie") {
+            window.location.href = "activityFMovie.html";
+        }
+    }
+</script>
+
+</body>
+</html>
